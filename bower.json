@@ -1,0 +1,21 @@
+{
+  "name": "titanarena-promo",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Aleksey Bestuzhev <aleksey.bestuzhev@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^7.0.0",
+    "jquery": "^3.2.1"
+  }
+}
