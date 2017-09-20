@@ -1,5 +1,5 @@
 
-//gulp-sass gulp-autoprefixer gulp-plumber gulp-livereload browser-sync
+//gulp-sass gulp-autoprefixer gulp-plumber gulp-livereload browser-sync gulp-minify-css
 //plugins for development
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
