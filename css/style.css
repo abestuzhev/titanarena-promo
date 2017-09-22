@@ -1,15 +1,27 @@
 @charset "UTF-8";
 @import url(http://weloveiconfonts.com/api/?family=entypo);
+@font-face {
+  font-family: 'Whitney-Bold';
+  src: url("../fonts/Whitney-Bold.eot");
+  src: url("../fonts/Whitney-Bold.woff2") format("woff2"), url("../fonts/Whitney-Bold.woff") format("woff"), url("../fonts/Whitney-Bold.ttf") format("truetype"), url("../fonts/Whitney-Bold.svg#Whitney-Bold") format("svg"), url("../fonts/Whitney-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal; }
+
 html, body {
-  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 body * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(../img/bg.jpg) 50% 50% no-repeat; }
 
 .page-layout {
   min-height: 100%;
@@ -23,8 +35,130 @@ body * {
 /***************************************
 header
 ***************************************/
-.header-title {
-  margin: 0; }
+.header {
+  margin-top: 38px;
+  margin-bottom: 52px; }
+  .header-layout {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .header-title {
+    margin: 0;
+    font-family: 'Whitney-Bold', sans-serif;
+    font-size: 4.75rem;
+    color: #bb4bb8; }
+    .header-title span {
+      font-size: 6.875rem; }
+  .header-subtitle {
+    margin: 0;
+    font-family: 'Whitney-Bold', sans-serif;
+    font-size: 4.375rem;
+    color: #bb4bb8; }
+  .header-text {
+    font-size: 1.875rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 76px; }
+  .header-exhortation {
+    font-weight: 400; }
+    .header-exhortation--color-1 {
+      color: #bb4bb8; }
+    .header-exhortation--color-2 {
+      color: #00a0dd; }
+    .header-exhortation--color-3 {
+      color: #6fc054; }
+
+.с-conditions {
+  text-align: right;
+  margin-right: 23px; }
+  .с-conditions-title {
+    text-transform: uppercase;
+    color: #545066;
+    font-size: 1.125rem;
+    font-family: 'Whitney-Bold', sans-serif; }
+  .с-conditions-link {
+    color: #575757;
+    font-size: 0.875rem; }
+
+.c-btn-down {
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 1px solid #bb4bb8;
+  position: relative;
+  margin: 58px 0; }
+  .c-btn-down::after {
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: 17px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    width: 17px;
+    height: 1px;
+    background-color: #bb4bb8; }
+  .c-btn-down::before {
+    content: '';
+    position: absolute;
+    top: 34px;
+    left: 29px;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    width: 17px;
+    height: 1px;
+    background-color: #bb4bb8; }
+
+.c-btn-add {
+  display: block;
+  color: #423e52;
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: lowercase; }
+  .c-btn-add__icon {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #eee;
+    margin-right: 12px;
+    position: relative; }
+    .c-btn-add__icon::before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 17px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background-color: #7d7a8a; }
+    .c-btn-add__icon::after {
+      content: '';
+      position: absolute;
+      width: 17px;
+      height: 1px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background-color: #7d7a8a; }
 
 /***************************************
 content
@@ -37,25 +171,25 @@ content
 
 input[type="search"] {
   width: 100%;
-  height: 36px;
-  padding: 0;
-  line-height: 32px;
-  background: #56e2c9;
-  color: #fff;
-  border: 0;
-  font: bold 14px/20px "Arial", sans-serif;
+  padding: 16px 13px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font: 0.875rem "Roboto", sans-serif;
   text-indent: 12px;
+  color: #333;
   outline: none;
   -webkit-appearance: textfield; }
 
 input[type="search"]::-webkit-input-placeholder {
-  color: transparent; }
+  color: #333; }
 
 input[type="search"]::-moz-input-placeholder {
-  color: transparent; }
+  color: #333; }
 
 input[type="search"]:-ms-input-placeholder {
-  color: transparent; }
+  color: #333; }
 
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
   -webkit-appearance: none;
@@ -71,9 +205,6 @@ input[type="search"]::-webkit-search-cancel-button:before, input[type="search"]:
   content: 'x';
   font-style: normal; }
 
-input[type="search"]:invalid {
-  border: 0 !important; }
-
 input[type="search"]:invalid::-webkit-search-cancel-button:before, input[type="search"]:invalid::-webkit-search-results-button:before, input[type="search"]:invalid::-webkit-search-results-decoration:before {
   font-family: "entypo";
   content: attr(data-icon); }
@@ -87,7 +218,7 @@ input[type="search"] + label {
 
 input[type="search"] + label:before {
   position: absolute;
-  content: 'Выберите отдел';
+  content: 'В каком отделе вы совершили покупку?';
   left: 24px;
   width: 100%;
   color: #fff;
@@ -98,7 +229,7 @@ input[type="search"] + label:after {
   position: absolute;
   right: 10px;
   top: 6px;
-  color: #fff;
+  color: #333;
   content: '\25BE'; }
 
 input[type="search"]:focus::-webkit-input-placeholder {
@@ -158,15 +289,45 @@ input[type="search"]:valid + label {
 
 /*end style select*/
 .l-btn {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .l-btn--center {
-    text-align: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-btn--right {
-    text-align: right; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-btn--left {
-    text-align: left; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-btn .c-btn {
     display: inline-block; }
+    .l-btn .c-btn--large {
+      padding: 22px 66px; }
+    .l-btn .c-btn-info {
+      color: #7d7a8a;
+      font-size: 0.875rem;
+      width: 50%;
+      margin-bottom: 14px;
+      text-align: center; }
+  .l-btn--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 .с-btn,
 button {
@@ -211,10 +372,13 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   letter-spacing: 1px;
-  padding: 10px;
+  padding: 16px 13px;
   background-color: transparent;
   outline: none;
+  border-radius: 8px;
   border: 1px solid #ccc; }
+  .c-input:focus {
+    border-color: #bb4bb8; }
 
 .c-label {
   position: absolute;
@@ -249,9 +413,9 @@ button {
 
 .effect-17 ~ label {
   position: absolute;
-  left: 0;
+  left: 13px;
   width: 100%;
-  top: 9px;
+  top: 17px;
   color: #aaa;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -259,10 +423,11 @@ button {
   z-index: -1;
   letter-spacing: 0.5px; }
 
-.effect-17:focus ~ label, .has-content.effect-17 ~ label {
-  top: -16px;
-  font-size: 12px;
-  color: #3399FF;
+.effect-17:focus ~ label,
+.has-content.effect-17 ~ label {
+  top: 6px;
+  font-size: 11px;
+  color: #bb4bb8;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
