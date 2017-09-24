@@ -33,4 +33,9 @@ $(document).ready(function(){
     });
   });
 
+  /*показ пароля*/
+  $('.fa-eye-slash').on('click', function(){
+      $(this).siblings('.c-input').attr('type', 'text');
+  });
+
 });

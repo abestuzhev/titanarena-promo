@@ -1,5 +1,10 @@
 $brouser-context: 16;
 
-@function em($pixels, $context: $brouser-context){
+@function rem($pixels, $context: $brouser-context){
   @return #{$pixels/$context}rem;
 };
+
+@function em($pixels, $context: $brouser-context){
+  @return #{$pixels/$context}em;
+};
+
