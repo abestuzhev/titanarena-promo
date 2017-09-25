@@ -44,7 +44,7 @@
                   <div class="с-conditions-title">Читайте внимательно!</div>
                   <a href="#" class="с-conditions-link">Услови акции</a>
                 </div>
-                <a href="#" class="с-btn c-btn--large">Зарегистрироваться</a>
+                <a href="#content-form" class="с-btn с-btn--reg c-btn--large">Зарегистрироваться</a>
               </div>
             </div>
 
@@ -54,11 +54,11 @@
 
     </header>
 
-    <div class="l-btn l-btn--center">
-      <a href="#" class="c-btn-down"></a>
+    <div class="l-btn l-btn--down l-btn--center">
+      <a href="#content-form" class="c-btn-down"></a>
     </div>
 
-    <section class="content">
+    <section class="content" id="content-form">
         <div class="c-layout">
             <form action="#" class="c-form">
 
@@ -68,69 +68,75 @@
                   <label class="c-label">ФИО</label>
                 </div>
                 <div class="c-form-item input-effect">
-                  <input type="text" class="c-input effect-17">
+                  <input type="text" class="c-input c-input--date effect-17">
                   <label class="c-label">Дата рождения</label>
                 </div>
                 <div class="c-form-item input-effect">
-                  <input type="text" class="c-input effect-17">
+                  <input type="text" class="c-input c-input--tel effect-17">
                   <label class="c-label">Телефон</label>
                 </div>
               </div><!-- end c-form-list -->
 
-              <div class="c-form-list">
-                <div class="c-form-item">
-                  <input type="search" id="brand-filter" placeholder="Найти отдел.." name="brands" data-list="brands-list" autocomplete="off" required />
-                  <label for="brand-filter" data-icon="&#128269;"></label>
-                  <datalist id="brands-list">
-                    <select>
-                      <option value="Подио" />
-                      <option value="Кари" />
-                      <option value="Билайн" />
-                      <option value="Westfalika" />
-                      <option value="Мартиника" />
-                      <option value="Клинок" />
-                      <option value="Soho" />
-                      <option value="Московский Ювелирный завод" />
-                      <option value="Amati" />
-                      <option value="Эконика" />
-                      <option value="МТС" />
-                      <option value="Кабинотье" />
-                      <option value="ИЛЬ ДЕ БОТЕ" />
-                      <option value="Coffe Man" />
-                      <option value="Органик Маркет" />
-                      <option value="Бюстье" />
-                      <option value="Leo Ventoni" />
-                      <option value="Связной" />
-                      <option value="ГрандПри" />
-                      <option value="Мультиварка" />
-                      <option value="Zinger" />
-                      <option value="Пандора" />
-                      <option value="Аптека МК" />
-                      <option value="Адамас" />
-                      <option value="Mascotte" />
-                      <option value="Четыре лапы" />
-                      <option value="Harold" />
-                      <option value="РивГош" />
-                      <option value="G Store" />
-                      <option value="Мегафон" />
-                      <option value="H&M" />
-                      <option value="Vitacci" />
-                    </select>
-                  </datalist>
-                </div>
-                <div class="c-form-item input-effect">
-                  <input type="text" class="c-input effect-17">
-                  <label class="c-label">Сумма покупки</label>
-                </div>
-                <div class="c-form-item input-effect">
-                  <input type="text" class="c-input effect-17">
-                  <label class="c-label">Дата</label>
-                </div>
-              </div><!-- end c-form-list -->
+              <div class="purchase-layout">
+                  <div class="c-form-list purchase">
+                      <div class="c-form-item">
+                          <input type="search" id="brand-filter-1" placeholder="Найти отдел.." name="brand-filter-1" data-list="brands-list" autocomplete="off" required />
+                          <label for="brand-filter-1" data-icon="&#128269;"></label>
+                          <datalist id="brands-list">
+                              <select>
+                                  <option value="Подио" />
+                                  <option value="Кари" />
+                                  <option value="Билайн" />
+                                  <option value="Westfalika" />
+                                  <option value="Мартиника" />
+                                  <option value="Клинок" />
+                                  <option value="Soho" />
+                                  <option value="Московский Ювелирный завод" />
+                                  <option value="Amati" />
+                                  <option value="Эконика" />
+                                  <option value="МТС" />
+                                  <option value="Кабинотье" />
+                                  <option value="ИЛЬ ДЕ БОТЕ" />
+                                  <option value="Coffe Man" />
+                                  <option value="Органик Маркет" />
+                                  <option value="Бюстье" />
+                                  <option value="Leo Ventoni" />
+                                  <option value="Связной" />
+                                  <option value="ГрандПри" />
+                                  <option value="Мультиварка" />
+                                  <option value="Zinger" />
+                                  <option value="Пандора" />
+                                  <option value="Аптека МК" />
+                                  <option value="Адамас" />
+                                  <option value="Mascotte" />
+                                  <option value="Четыре лапы" />
+                                  <option value="Harold" />
+                                  <option value="РивГош" />
+                                  <option value="G Store" />
+                                  <option value="Мегафон" />
+                                  <option value="H&M" />
+                                  <option value="Vitacci" />
+                              </select>
+                          </datalist>
+                      </div>
+                      <div class="c-form-item input-effect">
+                          <input type="text" class="c-input c-input--sum effect-17" name="purchase-amount-1">
+                          <label class="c-label">Сумма покупки</label>
+                      </div>
+                      <div class="c-form-item input-effect">
+                          <input type="text" class="c-input c-input--date effect-17" name="date-amount-1">
+                          <label class="c-label">Дата</label>
+                      </div>
+                  </div><!-- end c-form-list purchase -->
+              </div><!--END purchase-layout-->
+
+
 
               <div class="l-btn l-btn--left ">
-                <i class="c-btn-add__icon"></i>
-                <a href="#" class="c-btn-add">добавить <br>еще покупку</a>
+                  <a href="#" class="c-btn-add">
+                      <i class="c-btn-add__icon"></i>
+                      <span class="c-btn-add__text">добавить <br>еще покупку</span>
+                  </a>
               </div>
 
               <div class="l-btn l-btn--center l-btn--column">
@@ -187,6 +193,8 @@
   src="https://code.jquery.com/jquery-2.2.4.js"
   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
   crossorigin="anonymous"></script>
+
+  <script src="bower_components/jquery-mask-plugin/dist/jquery.mask.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <script src="js/main.js"></script>
 </body>
