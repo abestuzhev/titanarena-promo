@@ -299,7 +299,8 @@ input[type="search"] + label:before {
   width: 100%;
   color: #fff;
   font: bold 14px/20px "Arial", sans-serif;
-  text-align: left; }
+  text-align: left;
+  display: none; }
 
 input[type="search"] + label:after {
   position: absolute;

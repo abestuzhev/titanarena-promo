@@ -366,6 +366,7 @@ input[type="search"] + label:before {
   color: #fff;
   font: bold 14px/20px "Arial", sans-serif;
   text-align: left;
+  display: none;
 }
 input[type="search"] + label:after {
   // margin-left: 7px;
