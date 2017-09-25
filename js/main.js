@@ -113,11 +113,11 @@ $(document).ready(function(){
             '</datalist>' +
             '</div>' +
             '<div class="c-form-item input-effect">' +
-            '<input type="text" class="c-input effect-17" name="purchase-amount-' + countBox +'">' +
+            '<input type="text" class="c-input c-input--sum effect-17" name="purchase-amount-' + countBox +'">' +
             '<label class="c-label">Сумма покупки</label>' +
             '</div>' +
             '<div class="c-form-item input-effect">' +
-            '<input type="text" class="c-input effect-17" name="date-amount-' + countBox +'">' +
+            '<input type="text" class="c-input c-input--date effect-17" name="date-amount-' + countBox +'">' +
             '<label class="c-label">Дата</label>' +
             '</div>' +
             '</div>'
