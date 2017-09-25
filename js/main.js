@@ -17,21 +17,26 @@ $(document).ready(function(){
 
   // Cannot style datalist elements yet, so get
   // each option value and pass to jQuery UI Autocomplete
-  $('input[data-list]').each(function () {
-    var availableTags = $('#' + $(this).attr("data-list")).find('option').map(function () {
-      return this.value;
-    }).get();
 
-    $(this).autocomplete({
-      source: availableTags
-    }).on('focus', function () {
-      $(this).autocomplete('search', ' ');
-    }).on('search', function () {
-      if ($(this).val() === '') {
-        $(this).autocomplete('search', ' ');
-      }
-    });
-  });
+  function searchDepartment (){
+      $('input[data-list]').each(function () {
+          var availableTags = $('#' + $(this).attr("data-list")).find('option').map(function () {
+              return this.value;
+          }).get();
+
+          $(this).autocomplete({
+              source: availableTags
+          }).on('focus', function () {
+              $(this).autocomplete('search', ' ');
+          }).on('search', function () {
+              if ($(this).val() === '') {
+                  $(this).autocomplete('search', ' ');
+              }
+          });
+      });
+  }
+  searchDepartment();
+
 
   /*показ пароля*/
 
@@ -64,6 +69,44 @@ $(document).ready(function(){
     $('.c-input--date').mask('00.00.0000');
     $('.c-input--tel').mask('+7(000)000-00-00');
     $('.c-input--sum').mask('000000');
+
+    function dateIsValid( userValue )
+    {
+        var regexp = /^\d{1,2}\.\d{1,2}\.\d{1,4}$/;
+        if ( regexp.test( userValue ) )
+        {
+            var values = userValue.split( '.' );
+            var d = values[0] - 0;
+            var m = values[1] - 0;
+            var y = values[2] - 0;
+            var daysInMonth = 0;
+
+            if ( m < 1 || m > 12 || y < 1 || y > 9999 ) {
+                $('c-input--date').val('');
+                return false;
+            }
+            else
+            {
+                if ( m == 2 )
+                {
+                    daysInMonth = ( ( y % 4 ) == 0 ) ? 29 : 28;
+                }
+                else if ( m == 4 || m == 6 || m == 9 || m == 11 )
+                {
+                    daysInMonth = 30;
+                }
+                else daysInMonth = 31;
+                return ( d <= daysInMonth );
+            }
+        }
+        else return false;
+    }
+
+    $('.c-input--date').on('change', function(){
+        var $dateUser = $(this).val();
+        dateIsValid($dateUser);
+    });
+
 
 
     /*добавление новой покупки на главной*/
@@ -127,5 +170,8 @@ $(document).ready(function(){
         $('.c-input--date').mask('00.00.0000');
         $('.c-input--tel').mask('+7(000)000-00-00');
         $('.c-input--sum').mask('000000');
+
+        searchDepartment();
     });
 });
+

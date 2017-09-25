@@ -343,9 +343,10 @@ content
 /*start style select*/
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
-[data-icon]:after {
+.search-icon::after {
   font-family: "entypo";
-  content: attr(data-icon);
+  content: 'attr( data-icon)';
+  //width: 20px;
   speak: none;
 }
 input[type="search"] {
