@@ -34,8 +34,15 @@ $(document).ready(function(){
   });
 
   /*показ пароля*/
-  $('.fa-eye-slash').on('click', function(){
-      $(this).siblings('.c-input').attr('type', 'text');
+
+  $('.fa').on('click', function(){
+      if($(this).hasClass('fa-eye-slash')){
+          $(this).siblings('input[type="password"]').attr('type', 'text');
+          $(this).attr('class', 'fa fa-eye');
+      }else{
+          $(this).siblings('input[type="text"]').attr('type', 'password');
+          $(this).attr('class', 'fa fa-eye-slash');
+      }
   });
 
 
@@ -63,10 +70,9 @@ $(document).ready(function(){
     $(document).on('click','.c-btn-add', function(e){
         e.preventDefault();
         var countBox = $(".purchase-layout").length+1;
-        console.log('Количество элементов' + countBox);
         var $accentBoxTemplate = $(
             '<div class="c-form-list purchase">' +
-            '<div class="c-form-item">' +
+            '<div class="c-form-item c-form-item--search-department">' +
             '<input type="search" id="brand-filter-' + countBox +'" placeholder="Найти отдел.." name="brand-filter-' + countBox +'" data-list="brands-list" autocomplete="off" required />' +
             '<label for="brand-filter-' + countBox +'" data-icon="&#128269;"></label>' +
             '<datalist id="brands-list">' +

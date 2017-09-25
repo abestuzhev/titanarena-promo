@@ -619,6 +619,15 @@ auth
     width: 100%; }
   .auth .fa {
     margin-right: 6px; }
+  .auth .fa-eye-slash,
+  .auth .fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    cursor: pointer; }
 
 /***************************************
 user
