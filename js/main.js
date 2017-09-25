@@ -117,7 +117,7 @@ $(document).ready(function(){
             '<div class="c-form-list purchase">' +
             '<div class="c-form-item c-form-item--search-department">' +
             '<input type="search" id="brand-filter-' + countBox +'" placeholder="Найти отдел.." name="brand-filter-' + countBox +'" data-list="brands-list" autocomplete="off" required />' +
-            '<label for="brand-filter-' + countBox +'" data-icon="&#128269;"></label>' +
+            '<label for="brand-filter-' + countBox +'"></label>' +
             '<datalist id="brands-list">' +
             '<select>' +
             '<option value="Подио" />' +

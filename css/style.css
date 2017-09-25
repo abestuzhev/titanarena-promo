@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://weloveiconfonts.com/api/?family=entypo);
 @font-face {
   font-family: 'Whitney-Bold';
   src: url("../fonts/Whitney-Bold.eot");
@@ -277,9 +276,8 @@ content
 
 /*start style select*/
 .search-icon::after {
-  font-family: "entypo";
-  content: 'attr( data-icon)';
-  speak: none; }
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f002"; }
 
 input[type="search"] {
   width: 100%;

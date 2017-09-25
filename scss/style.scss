@@ -341,13 +341,14 @@ content
 }
 
 /*start style select*/
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+//@import url(http://weloveiconfonts.com/api/?family=entypo);
 
 .search-icon::after {
-  font-family: "entypo";
-  content: 'attr( data-icon)';
+  //font-family: "entypo";
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f002";
   //width: 20px;
-  speak: none;
+  //speak: none;
 }
 input[type="search"] {
   width: 100%;
