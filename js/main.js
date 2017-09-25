@@ -40,7 +40,7 @@ $(document).ready(function(){
 
   /*показ пароля*/
 
-  $('.fa').on('click', function(){
+  $('.auth .fa').on('click', function(){
       if($(this).hasClass('fa-eye-slash')){
           $(this).siblings('input[type="password"]').attr('type', 'text');
           $(this).attr('class', 'fa fa-eye');
