@@ -1,3 +1,15 @@
+//$.getJSON('data.json', function(data) {
+//    var output="<ul>";
+//    for (var i in data.company) {
+//        console.log(data.company[i].name);
+//        output+="<li>" + data.company[i].name + "</li>";
+//    }
+//
+//    output+="</ul>";
+//    document.getElementById("placeholder").innerHTML=output;
+//});
+
+
 $(document).ready(function(){
   // JavaScript for label effects only
   $(window).load(function(){
@@ -11,6 +23,23 @@ $(document).ready(function(){
       }
     })
   });
+
+  /*добавление списка из JSON*/
+    //$.getJSON('data.json', function(data) {
+    //    var $output="";
+    //    for (var i in data.company) {
+    //
+    //        $output+= '<option value="' + data.company[i].name + '"/>';
+    //    }
+    //
+    //    //$('#brands-list').find(select).html(output);
+    //    //document.getElementById("#brands-list").innerHTML=output;
+    //
+    //    $('#brands-list').find('select').append($output);
+    //
+    //});
+
+
 
   // This demo uses jQuery UI Autocomplete
   // https://jqueryui.com/autocomplete
@@ -173,5 +202,29 @@ $(document).ready(function(){
 
         searchDepartment();
     });
+
+
+    /*popup */
+    $(".popup-btn").click(function(event) {
+        event.preventDefault();
+        $('.popup-approve').toggleClass('popup-show');
+        $('.popup_bg').toggleClass('is-visible');
+        $('body').toggleClass('body-popup');
+    });
+
+    $(".popup_bg").click(function(event) {
+        event.preventDefault();
+        $('.popup').removeClass('popup-show');
+        $(this).toggleClass('is-visible');
+        $('body').removeClass('body-popup');
+    });
+
+    $(".popup-approve__close").click(function(event) {
+        event.preventDefault();
+        $('.popup').removeClass('popup-show');
+        $('.popup_bg').removeClass('is-visible');
+        $('body').removeClass('body-popup');
+    });
+    
 });
 

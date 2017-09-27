@@ -9,12 +9,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <div class="page-layout">
+    <div id="placeholder"></div>
+
 
     <header class="header">
         <div class="c-layout">
@@ -82,14 +85,17 @@
                 </div>
               </div><!-- end c-form-list -->
 
+
+
               <div class="purchase-layout">
                   <div class="c-form-list purchase">
                       <div class="c-form-item c-form-item--search-department">
+                          <input type="hidden" class="hidden">
                           <input type="search" id="brand-filter-1" placeholder="Найти отдел.." name="brand-filter-1" data-list="brands-list" autocomplete="off" required />
                           <label for="brand-filter-1" class="search-icon"></label>
                           <datalist id="brands-list">
                               <select>
-                                  <option value="Подио" />
+                                  <option value="Подио" data-id="2" />
                                   <option value="Кари" />
                                   <option value="Билайн" />
                                   <option value="Westfalika" />
@@ -190,8 +196,42 @@
             </a>
         </div>
     </div>
+    <a href="#" class="popup-btn">появление попапа</a>
 
 </footer>
+
+
+<section class="popup popup-approve">
+    <div class="popup-approve__close">[ X ]</div>
+    <div class="popup-approve__bubble-1">
+        <img src="img/bubble-1.png" alt="">
+    </div>
+    <div class="popup-approve__bubble-2">
+        <img src="img/bubble-2.png" alt="">
+    </div>
+    <div class="popup-approve__left">
+        <div class="popup-approve__id">
+            <div class="popup-approve__id-num">259486</div>
+        </div>
+    </div>
+    <div class="popup-approve__right">
+        <h3 class="popup-approve__title">Вы в списке участников!</h3>
+        <div class="popup-approve__date">
+            <div class="popup-approve__date-text">Ближайший розыгрыш:</div>
+            <div class="popup-approve__date-num">22.10.17 г.</div>
+        </div>
+        <ol class="popup-approve__list">
+            <li class="popup-approve__item">Запоминаем/ Записываем/ Фотографируем ID</li>
+            <li class="popup-approve__item">Приходим в ТРК Арена в период с 16:00 до 20:00</li>
+            <li class="popup-approve__item">Показываем ID (или свой номер телефона) администратору </li>
+            <li class="popup-approve__item">Получаем купон на участие</li>
+        </ol>
+        <div class="popup-approve__res">Profit</div>
+    </div>
+</section>
+
+<!--задний фон модального окна-->
+<div class="popup_bg"></div>
 
  <script src="bower_components/jquery/dist/jquery.js"></script>
 <script
