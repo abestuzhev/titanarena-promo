@@ -17,6 +17,7 @@
   "dependencies": {
     "normalize-css": "normalize.css#^7.0.0",
     "jquery": "^3.2.1",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-mask-plugin": "Jquery-Mask-Plugin#^1.14.11"
   }
 }
