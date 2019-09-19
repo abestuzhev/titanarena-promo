@@ -1,0 +1,50 @@
+.coupons {
+    margin-top: 100px;
+}
+
+.coupons-title {
+    font-family: 'Whitney-Bold', sans-serif;
+    font-size: 76px;
+    color: #bb4bb8;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: .8;
+    margin-bottom: 20px;
+}
+
+.coupons-subtitle {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.coupons-list {
+
+}
+
+.coupons-list::after {
+    content:'';
+    clear: both;
+    display: table;
+}
+
+.coupons-list__item {
+    margin-right: 18px;
+    float: left;
+    margin-bottom: 18px;
+
+}
+
+.coupons-card {
+    width: 82px;
+    height: 82px;
+    border: 1px solid #c6c6c6;
+    font-family: 'Whitney-Bold', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    line-height: 82px;
+    cursor: pointer;
+}
