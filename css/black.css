@@ -65,13 +65,18 @@ input[type="search"],
 .user-entry_name,
 .user-content,
 .c-input,
-.coupons-subtitle {
-    color: #c3c3c3;
+.coupons-subtitle,
+.с-conditions-title,
+.с-conditions-link,
+.effect-17 ~ label,
+.c-btn-add,
+.l-btn .c-btn-info {
+    color: #fff;
 }
 
 .user-data_header .user-data_cell,
 .user-data_row {
-    border-color: #c3c3c3;
+    border-color: #fff;
 }
 
 .user-data_row:hover {
@@ -79,16 +84,16 @@ input[type="search"],
 }
 
 .c-btn-add__text {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 input[type="search"]::-moz-placeholder {
     color: #c3c3c3; /* Цвет подсказывающего текста */
 }
-input[type="search"]::-webkit-input-placeholder { color: #c3c3c3; }
-input[type="search"]:-ms-input-placeholder { color: #c3c3c3; }
-input[type="search"]::-ms-input-placeholder { color: #c3c3c3; }
-input[type="search"]::placeholder { color: #c3c3c3; }
+input[type="search"]::-webkit-input-placeholder { color: #fff; }
+input[type="search"]:-ms-input-placeholder { color: #fff; }
+input[type="search"]::-ms-input-placeholder { color: #fff; }
+input[type="search"]::placeholder { color: #fff; }
 
 .user .c-form-list,
 .search .c-form-list{
