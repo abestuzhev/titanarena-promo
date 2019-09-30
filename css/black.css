@@ -31,7 +31,7 @@ body {
 .header-11-title {
     font-family: 'Whitney-Bold', sans-serif;
     font-size: 50px;
-    margin-bottom: 36px;
+    margin-bottom: 26px;
 }
 
 .header-11-desc {
@@ -189,7 +189,7 @@ input[type="search"]::placeholder { color: #fff; }
 
     .header-11-title {
         font-size: 44px;
-        margin-bottom: 26px;
+        margin-bottom: 20px;
     }
 
     .header .с-btn::after {
